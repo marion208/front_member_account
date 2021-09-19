@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Noto-Regular";
+    src: url("./../fonts/NotoSansJP-Regular.otf");
+}
+@font-face {
+    font-family: "Noto-Bold";
+    src: url("./../fonts/NotoSansJP-Bold.otf");
+}
+body {
+    background-image: url("../assets/harli-marten-n7a2OJDSZns-unsplash.jpg");
+    margin: 0;
+    font-family: "Noto-Regular";
+}
+@media screen and (max-width: 1400px) {
+    body {
+        background-size: 200vh;
+    }
+}
+@media screen and (min-width: 1400px) {
+    body {
+        background-size: cover;
+    }
+}
+
+.page_connection {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.form_connection {
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 50px black;
+}
+.div_input {
+    margin: 0.5em;
+}
+.div_input > p {
+    margin-bottom: 0.8em;
+}
+.div_input > input {
+    font-size: 1em;
+    width: 25em;
+    height: 1.5em;
+    text-align: center;
+    background-color: rgb(208 208 208);
+    padding: 0.2em;
+    border: 1px solid rgb(130 130 130);
+}
+.div_end_button {
+    margin-top: 1em;
+}
+.div_input_conf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.VuePassword { 
+   width: 25em;
+   display: flex;
+    justify-content: center;  
+    width: 100%;
+}
+.input_with_strength {
+    display: block;
+    width: 25em;
+}
+.VuePassword__Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width: 25em;
+}
+.VuePassword__Container input {
+    height: 1.5em;
+    text-align: center;
+    background-color: rgb(208 208 208);
+    padding: 0.2em;
+    border: 1px solid rgb(130 130 130);
+    font-size: 1em;
+}
+/*
+.VuePassword {
+    display: flex;
+    justify-content: center;  
+}
+.VuePassword__Container input {
+    width: 25em;
+    height: 1.5em;
+    text-align: center;
+    background-color: rgb(208 208 208);
+    padding: 0.2em;
+    border: 1px solid rgb(130 130 130);
+    font-size: 1em;
+}
+*/
