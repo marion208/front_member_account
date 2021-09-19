@@ -7,7 +7,7 @@ Application permettant de gérer des comptes utilisateurs avec leurs données. F
 - suppression de son compte
 
 Application faite en Node.js pour le back, et en Vue.js pour le front.
-Le code de la partie front est disponible au lien : https://github.com/marion208/front_member_account
+Le code de la partie back est disponible au lien : https://github.com/marion208/api_member_account
 Cette application est en ligne, au lien : https://member-account.marion208.com/
 
 Application for managing user accounts with their data. Features:
@@ -17,5 +17,5 @@ Application for managing user accounts with their data. Features:
 - deletion of his account
 
 Application made in Node.js for the back, and Vue.js for the front.
-The code of the front part is available at the link: https://github.com/marion208/front_member_account
+The code of the back part is available at the link: https://github.com/marion208/api_member_account
 This app is available online at the link: https://member-account.marion208.com/
