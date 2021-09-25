@@ -36,25 +36,26 @@ export default {
   methods: {
     accountConnection: function() {
         var address_email = document.getElementById('mail_input').value;
-      var password_account = document.getElementById('password_input').value;
-        var authAccount = {
-          "email_address": address_email,
-          "password": password_account
+        var password_account = document.getElementById('password_input').value;
+        if (address_email.trim() != '' && password_account.trim() != '') {
+          var authAccount = {
+            "email_address": address_email,
+            "password": password_account
           }; 
-      var jsonAuthAccount = JSON.stringify(authAccount);
-
-        var linkPostApi = process.env.VUE_APP_API + 'api/member/login';
-        axios.post(linkPostApi, jsonAuthAccount, { headers: {'Content-Type': 'application/json'}})
-          .then(response => {
-          if (response.status == 200) {
-            sessionStorage.setItem('id_member', response.data.id_member);
-            sessionStorage.setItem('id_data_member', response.data.id_data_member);
-            sessionStorage.setItem('token', response.data.token);
-            window.location.href = "/profile";
-        } else {
-            document.getElementById('error_msg_password').innerHTML = 'Une erreur est parvenue lors de la connexion. Veuillez vérifier votre mot de passe.';
-        }
-          });   
+        var jsonAuthAccount = JSON.stringify(authAccount);
+          var linkPostApi = process.env.VUE_APP_API + 'api/member/login';
+          axios.post(linkPostApi, jsonAuthAccount, { headers: {'Content-Type': 'application/json'}})
+            .then(response => {
+            if (response.status == 200) {
+              sessionStorage.setItem('id_member', response.data.id_member);
+              sessionStorage.setItem('id_data_member', response.data.id_data_member);
+              sessionStorage.setItem('token', response.data.token);
+              window.location.href = "/profile";
+          } else {
+              document.getElementById('error_msg_password').innerHTML = 'Une erreur est parvenue lors de la connexion. Veuillez vérifier votre mot de passe.';
+          }
+        })
+      }
     }
   }
 }

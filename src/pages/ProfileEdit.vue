@@ -36,7 +36,7 @@
         <ButtonWarning msg="Supprimer mon compte" id="button_delete" @click.native="showModal = true" />
       </div>
     </div>
-    <ModalConfDeleteAccount v-if="showModal" @close="showModal = false">
+    <ModalConfDeleteAccount v-if="showModal" @close="showModal = false" id="modal_delete_account" >
         <!--
       you can use custom content here to overwrite
       default content
